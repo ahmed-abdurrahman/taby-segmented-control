@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+    </dependencies>
+    <scenes>
+        <!--Parent View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Parent View Controller" customClass="ParentViewController" customModule="UISegmentedControlAsTabbarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vac-Tm-MIu" userLabel="Content View">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8dy-A3-aXY" customClass="TabySegmentedControl" customModule="UISegmentedControlAsTabbarDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="switchTabs:" destination="BYZ-38-t0r" eventType="valueChanged" id="2GE-YB-E1a"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8dy-A3-aXY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0Hf-8M-gs4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vac-Tm-MIu" secondAttribute="bottom" id="ATq-4F-9wU"/>
+                            <constraint firstAttribute="trailing" secondItem="8dy-A3-aXY" secondAttribute="trailing" id="Liz-bQ-U29"/>
+                            <constraint firstAttribute="trailing" secondItem="Vac-Tm-MIu" secondAttribute="trailing" id="YUT-B2-dga"/>
+                            <constraint firstItem="8dy-A3-aXY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="oy6-zZ-5Wb"/>
+                            <constraint firstItem="Vac-Tm-MIu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="p2N-7l-Our"/>
+                            <constraint firstItem="Vac-Tm-MIu" firstAttribute="top" secondItem="8dy-A3-aXY" secondAttribute="bottom" constant="8" id="pMP-qV-kKY"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="contentView" destination="Vac-Tm-MIu" id="Slb-cH-y64"/>
+                        <outlet property="segmentedControl" destination="8dy-A3-aXY" id="8So-Ut-hvO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300.5" y="376.5"/>
+        </scene>
+        <!--First Tab View Controller-->
+        <scene sceneID="JKc-yd-sPq">
+            <objects>
+                <viewController storyboardIdentifier="FirstViewControllerId" id="lZO-To-rRd" customClass="FirstTabViewController" customModule="UISegmentedControlAsTabbarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KuK-id-4Z5"/>
+                        <viewControllerLayoutGuide type="bottom" id="jPk-x9-QM2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Pn-qF-3rb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Tab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEb-Bg-fpM">
+                                <rect key="frame" x="132" y="315" width="111" height="38"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BEb-Bg-fpM" firstAttribute="centerY" secondItem="6Pn-qF-3rb" secondAttribute="centerY" id="oqa-bX-cut"/>
+                            <constraint firstItem="BEb-Bg-fpM" firstAttribute="centerX" secondItem="6Pn-qF-3rb" secondAttribute="centerX" id="sQt-c4-2JU"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iS8-T3-8xy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99.5" y="1128.5"/>
+        </scene>
+        <!--Second Tab View Controller-->
+        <scene sceneID="PNL-Qd-vec">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewControllerId" id="fpJ-0I-vwR" customClass="SecondTabViewController" customModule="UISegmentedControlAsTabbarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cMA-pI-YF4"/>
+                        <viewControllerLayoutGuide type="bottom" id="0ZZ-eU-KkI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w42-Uo-r42">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Tab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="au5-ru-VEt">
+                                <rect key="frame" x="106" y="315" width="162" height="38"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="au5-ru-VEt" firstAttribute="centerY" secondItem="w42-Uo-r42" secondAttribute="centerY" id="b9u-AG-RUf"/>
+                            <constraint firstItem="au5-ru-VEt" firstAttribute="centerX" secondItem="w42-Uo-r42" secondAttribute="centerX" id="vZn-Rv-Ys3"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cJd-25-SJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="533.5" y="1128.5"/>
+        </scene>
+    </scenes>
+</document>
