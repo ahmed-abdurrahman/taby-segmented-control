@@ -11,10 +11,10 @@
 		C8DF7EF41BA8455100B9324F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8DF7EF21BA8455100B9324F /* Main.storyboard */; };
 		C8DF7EF61BA8455100B9324F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8DF7EF51BA8455100B9324F /* Assets.xcassets */; };
 		C8DF7EF91BA8455100B9324F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8DF7EF71BA8455100B9324F /* LaunchScreen.storyboard */; };
-		C8DF7F011BA8659A00B9324F /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF7F001BA8659A00B9324F /* ParentViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		C8DF7F031BA91A0400B9324F /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF7F021BA91A0400B9324F /* FirstTabViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		C8DF7F051BA91A1600B9324F /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF7F041BA91A1600B9324F /* SecondTabViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		C8DF7F071BA921F500B9324F /* TabySegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF7F061BA921F500B9324F /* TabySegmentedControl.swift */; settings = {ASSET_TAGS = (); }; };
+		C8DF7F011BA8659A00B9324F /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF7F001BA8659A00B9324F /* ParentViewController.swift */; };
+		C8DF7F031BA91A0400B9324F /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF7F021BA91A0400B9324F /* FirstTabViewController.swift */; };
+		C8DF7F051BA91A1600B9324F /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF7F041BA91A1600B9324F /* SecondTabViewController.swift */; };
+		C8DF7F071BA921F500B9324F /* TabySegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF7F061BA921F500B9324F /* TabySegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +104,7 @@
 				TargetAttributes = {
 					C8DF7EEA1BA8455100B9324F = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -265,6 +266,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdurrahman.UISegmentedControlAsTabbarDemo;
 				PRODUCT_NAME = UISegmentedControlAsTabBarDemo.temp_caseinsensitive_rename;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -277,6 +279,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdurrahman.UISegmentedControlAsTabbarDemo;
 				PRODUCT_NAME = UISegmentedControlAsTabBarDemo.temp_caseinsensitive_rename;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -299,6 +302,7 @@
 				C8DF7EFF1BA8455100B9324F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,9 +9,10 @@ import UIKit
 
 class ParentViewController: UIViewController {
 
+    
     enum TabIndex : Int {
-        case FirstChildTab = 0
-        case SecondChildTab = 1
+        case firstChildTab = 0
+        case secondChildTab = 1
     }
 
     @IBOutlet weak var segmentedControl: TabySegmentedControl!
@@ -19,11 +20,12 @@ class ParentViewController: UIViewController {
     
     var currentViewController: UIViewController?
     lazy var firstChildTabVC: UIViewController? = {
-        let firstChildTabVC = self.storyboard?.instantiateViewControllerWithIdentifier("FirstViewControllerId")
+        let firstChildTabVC = self.storyboard?.instantiateViewController(withIdentifier: "FirstViewControllerId")
         return firstChildTabVC
     }()
     lazy var secondChildTabVC : UIViewController? = {
-        let secondChildTabVC = self.storyboard?.instantiateViewControllerWithIdentifier("SecondViewControllerId")
+        let secondChildTabVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewControllerId")
+        
         return secondChildTabVC
     }()
 
@@ -34,11 +36,11 @@ class ParentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         segmentedControl.initUI()
-        segmentedControl.selectedSegmentIndex = TabIndex.FirstChildTab.rawValue
-        displayCurrentTab(TabIndex.FirstChildTab.rawValue)
+        segmentedControl.selectedSegmentIndex = TabIndex.firstChildTab.rawValue
+        displayCurrentTab(TabIndex.firstChildTab.rawValue)
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if let currentViewController = currentViewController {
             currentViewController.viewWillDisappear(animated)
@@ -46,18 +48,18 @@ class ParentViewController: UIViewController {
     }
     
     // MARK: - Switching Tabs Functions
-    @IBAction func switchTabs(sender: UISegmentedControl) {
+    @IBAction func switchTabs(_ sender: UISegmentedControl) {
         self.currentViewController!.view.removeFromSuperview()
         self.currentViewController!.removeFromParentViewController()
         
         displayCurrentTab(sender.selectedSegmentIndex)
     }
     
-    func displayCurrentTab(tabIndex: Int){
+    func displayCurrentTab(_ tabIndex: Int){
         if let vc = viewControllerForSelectedSegmentIndex(tabIndex) {
             
             self.addChildViewController(vc)
-            vc.didMoveToParentViewController(self)
+            vc.didMove(toParentViewController: self)
             
             vc.view.frame = self.contentView.bounds
             self.contentView.addSubview(vc.view)
@@ -65,12 +67,12 @@ class ParentViewController: UIViewController {
         }
     }
     
-    func viewControllerForSelectedSegmentIndex(index: Int) -> UIViewController? {
+    func viewControllerForSelectedSegmentIndex(_ index: Int) -> UIViewController? {
         var vc: UIViewController?
         switch index {
-        case TabIndex.FirstChildTab.rawValue :
+        case TabIndex.firstChildTab.rawValue :
             vc = firstChildTabVC
-        case TabIndex.SecondChildTab.rawValue :
+        case TabIndex.secondChildTab.rawValue :
             vc = secondChildTabVC
         default:
         return nil
